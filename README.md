@@ -2,9 +2,9 @@
 
 # ⚡ Cloudflare R2 Sync Hub
 
-### Gestiona tus buckets de Cloudflare R2 desde la bandeja de Windows
+### Manage your Cloudflare R2 buckets from the Windows system tray
 
-*Sube, descarga, previsualiza y comparte archivos sin abrir el navegador.*
+*Upload, download, preview, and share files without opening the browser.*
 
 <br/>
 
@@ -20,55 +20,55 @@
 
 <br/>
 
-### [⬇️ Descargar .exe para Windows](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest)
+### [⬇️ Download the .exe for Windows](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest)
 
-*Sin Python. Sin consola. Doble clic y listo.*
+*No Python. No console. Double-click and done.*
 
 </div>
 
 ---
 
-## 🚀 Instalación en 2 minutos (recomendado)
+## 🚀 2-minute setup (recommended)
 
-> **No necesitas instalar Python ni nada más.** Solo descarga el ejecutable de la sección [Releases](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest).
+> **You don't need to install Python or anything else.** Just grab the executable from [Releases](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest).
 
-| Paso | Qué hacer |
+| Step | What to do |
 |:----:|-----------|
-| **1️⃣** | Ve a **[Releases → Latest](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest)** y descarga el archivo `CloudflareR2Manager-vX.Y.Z.exe` |
-| **2️⃣** | Crea una carpeta, por ejemplo `C:\R2Manager\`, y mueve allí el `.exe` |
-| **3️⃣** | En esa misma carpeta crea un archivo llamado `.env` (ver [configuración](#️-configuración-env) abajo) |
-| **4️⃣** | Doble clic en el `.exe`. Se abrirá la app y quedará minimizada en la **bandeja del sistema** (junto al reloj) |
-| **5️⃣** | Tus carpetas locales se crean solas en `C:\Users\<TuUsuario>\Bucket\public` y `\private` |
+| **1️⃣** | Go to **[Releases → Latest](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest)** and download `CloudflareR2Manager-vX.Y.Z.exe` |
+| **2️⃣** | Create a folder, e.g. `C:\R2Manager\`, and move the `.exe` there |
+| **3️⃣** | In that same folder, create a file named `.env` (see [configuration](#️-env-configuration) below) |
+| **4️⃣** | Double-click the `.exe`. The app opens and stays minimized in the **system tray** (next to the clock) |
+| **5️⃣** | Your local folders are created automatically at `C:\Users\<YourUser>\Bucket\public` and `\private` |
 
 ```text
 C:\R2Manager\
-├── CloudflareR2Manager-v1.0.0.exe  ← descargado del Release
-└── .env                             ← lo creas tú (una sola vez)
+├── CloudflareR2Manager-v1.0.0.exe  ← downloaded from the Release
+└── .env                             ← you create this (one-time setup)
 ```
 
-> ⚠️ **Importante:** el `.exe` y el `.env` deben estar **en la misma carpeta**.
-> Si Windows SmartScreen avisa de "origen desconocido" → clic en *Más información → Ejecutar de todas formas* (normal al no tener firma de pago).
+> ⚠️ **Important:** the `.exe` and the `.env` must be **in the same folder**.
+> If Windows SmartScreen warns about an "unknown publisher" → click *More info → Run anyway* (expected, the binary is not code-signed).
 
 ---
 
-## ✨ Características
+## ✨ Features
 
-| | Funcionalidad | Detalle |
+| | Feature | Details |
 |---|---|---|
-| ⚙️ | **Vive en la bandeja** | Sin ventana en la barra de tareas. Clic derecho → *Abrir / Salir* |
-| 🗂️ | **Doble bucket** | Pestañas separadas para `🌐 Public` y `🔒 Private` |
-| 📁 | **Sync local automático** | Todo lo que copies a `~/Bucket/public` o `~/Bucket/private` se **sube solo** a R2 (watcher en segundo plano) |
-| 🖼️ | **Miniaturas remotas** | Previsualiza imágenes y vídeos de la nube **sin descargarlos** |
-| � ☁️ | **Acciones en lote** | Selecciona con checkboxes → subir, descargar, borrar o mover entre buckets |
-| 🌐 | **Router multi-CDN** | Desplegable con tus dominios (`cdn.tudominio.es`, ...) → botón *🔗 Copy URL* |
-| 🔑 | **Enlaces privados temporales** | Genera URLs firmadas de 1 hora para archivos privados → *🔑 Share Private URL* |
-| 🎨 | **UI oscura moderna** | Hecha con `CustomTkinter`, ligera y rápida |
+| ⚙️ | **Lives in the tray** | No taskbar window. Right-click → *Open / Exit* |
+| 🗂️ | **Dual bucket** | Separate tabs for `🌐 Public` and `🔒 Private` |
+| 📁 | **Automatic local sync** | Anything you drop into `~/Bucket/public` or `~/Bucket/private` is **auto-uploaded** to R2 (background watcher) |
+| 🖼️ | **Remote thumbnails** | Preview cloud images and videos **without downloading them** |
+| 📦 ☁️ | **Batch actions** | Select with checkboxes → upload, download, delete, or move between buckets |
+| 🌐 | **Multi-CDN router** | Dropdown with your domains (`cdn.yourdomain.com`, ...) → *🔗 Copy URL* button |
+| 🔑 | **Temporary private links** | Generate 1-hour signed URLs for private files → *🔑 Share Private URL* |
+| 🎨 | **Modern dark UI** | Built with `CustomTkinter`, lightweight and fast |
 
 ---
 
-## 🖼️ Vista previa
+## 🖼️ Preview
 
-> La app tiene 4 vistas: `🔒 Private → 📁 Local / ☁️ Cloud` y `🌐 Public → 📁 Local / ☁️ Cloud`.
+> The app has 4 views: `🔒 Private → 📁 Local / ☁️ Cloud` and `🌐 Public → 📁 Local / ☁️ Cloud`.
 
 ```text
 ┌─────────────────────────────────────────────────┐
@@ -77,7 +77,7 @@ C:\R2Manager\
 │ [🔒 Private Bucket] [🌐 Public Bucket]           │
 │  ┌───────────────────────────────────────────┐  │
 │  │ [📁 Local Files] [☁️ Cloud Files]          │  │
-│  │ ☑ 🖼️ foto.png                             │  │
+│  │ ☑ 🖼️ photo.png                            │  │
 │  │ ☑ 🎬 video.mp4                            │  │
 │  │ [📂 Move] [📋 Copy] [☁️ Upload to Cloud]   │  │
 │  └───────────────────────────────────────────┘  │
@@ -86,176 +86,176 @@ C:\R2Manager\
 
 ---
 
-## ⚙️ Configuración `.env`
+## ⚙️ `.env` configuration
 
-La app necesita tus credenciales de Cloudflare R2. Solo se hace **una vez**.
+The app needs your Cloudflare R2 credentials. This is a **one-time setup**.
 
-### 1. Crea el archivo
+### 1. Create the file
 
-Junto al `.exe` (o en la raíz del proyecto si ejecutas desde código), crea un archivo llamado exactamente `.env`:
+Next to the `.exe` (or at the project root if you run from source), create a file named exactly `.env`:
 
 ```text
-# Si usas el .exe:
+# If you use the .exe:
 C:\R2Manager\.env
 
-# Si usas el código fuente:
+# If you run from source:
 cloudflare_bucket_handler/.env
 ```
 
-> 💡 En Windows, asegúrate de que no se guarde como `.env.txt` (activa *Ver → Extensiones de nombre de archivo* en el Explorador).
+> 💡 On Windows, make sure it isn't saved as `.env.txt` (enable *View → File name extensions* in Explorer).
 
-### 2. Pega esta plantilla y rellénala
+### 2. Paste this template and fill it in
 
 ```env
-# ID de tu cuenta (panel de R2, barra lateral derecha)
-R2_ACCOUNT_ID=tu_account_id_aqui
+# Your account ID (R2 dashboard, right sidebar)
+R2_ACCOUNT_ID=your_account_id_here
 
-# Tokens de API (R2 → Manage R2 API Tokens → Create API Token)
-R2_ACCESS_KEY_ID=tu_access_key_aqui
-R2_SECRET_ACCESS_KEY=tu_secret_key_aqui
+# API tokens (R2 → Manage R2 API Tokens → Create API Token)
+R2_ACCESS_KEY_ID=your_access_key_here
+R2_SECRET_ACCESS_KEY=your_secret_key_here
 
-# Nombres exactos de tus buckets en R2
-R2_BUCKET_PUBLIC=publico
-R2_BUCKET_PRIVATE=privado
+# Exact names of your R2 buckets
+R2_BUCKET_PUBLIC=public
+R2_BUCKET_PRIVATE=private
 
-# Dominios CDN conectados al bucket público (separados por comas)
-PUBLIC_DOMAINS=cdn.tudominio.es,cdn.otrodominio.es
+# Custom CDN domains attached to the public bucket (comma-separated)
+PUBLIC_DOMAINS=cdn.yourdomain.com,cdn.otherdomain.com
 ```
 
-| Variable | Dónde conseguirla |
-|----------|-------------------|
-| `R2_ACCOUNT_ID` | Dashboard Cloudflare → **R2 Object Storage** → barra lateral derecha |
-| `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` | R2 → **Manage R2 API Tokens** → *Create API Token* → permiso *Admin Read & Write*. Cópialas al momento, no se vuelven a mostrar |
-| `R2_BUCKET_PUBLIC` / `R2_BUCKET_PRIVATE` | Nombres exactos de los buckets que **ya debes tener creados** en R2 |
-| `PUBLIC_DOMAINS` | Dominios personalizados conectados a tu bucket público (pestaña *Custom Domains* del bucket) |
+| Variable | Where to get it |
+|----------|-----------------|
+| `R2_ACCOUNT_ID` | Cloudflare dashboard → **R2 Object Storage** → right sidebar |
+| `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` | R2 → **Manage R2 API Tokens** → *Create API Token* → *Admin Read & Write* permission. Copy them immediately, they won't be shown again |
+| `R2_BUCKET_PUBLIC` / `R2_BUCKET_PRIVATE` | Exact names of the buckets you **must have already created** in R2 |
+| `PUBLIC_DOMAINS` | Custom domains attached to your public bucket (bucket's *Custom Domains* tab) |
 
 <details>
-<summary><b>📋 Ejemplo de .env completo</b></summary>
+<summary><b>📋 Full .env example</b></summary>
 
 ```env
 R2_ACCOUNT_ID=a1b2c3d4e5f6g7h8i9j0
 R2_ACCESS_KEY_ID=abc123def456
 R2_SECRET_ACCESS_KEY=xyz789secretkey000111222
-R2_BUCKET_PUBLIC=mi-cdn-publico
-R2_BUCKET_PRIVATE=mi-archivo-privado
-PUBLIC_DOMAINS=cdn.midominio.es
+R2_BUCKET_PUBLIC=my-public-cdn
+R2_BUCKET_PRIVATE=my-private-storage
+PUBLIC_DOMAINS=cdn.mydomain.com
 ```
 
 </details>
 
 ---
 
-## 🧑‍💻 Ejecutar desde código fuente (desarrolladores)
+## 🧑‍💻 Run from source (developers)
 
 ```bash
-# 1. Clonar
+# 1. Clone
 git clone https://github.com/d3vn0x3/cloudflare_bucket_handler.git
 cd cloudflare_bucket_handler
 
-# 2. (Recomendado) entorno virtual
+# 2. (Recommended) virtual environment
 python -m venv venv
 venv\Scripts\activate
 
-# 3. Instalar dependencias
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Crear el .env (ver sección anterior)
+# 4. Create the .env (see section above)
 
-# 5. Ejecutar
+# 5. Run
 python main.py
 ```
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project structure
 
 ```text
 cloudflare_bucket_handler/
-├── main.py                  # App principal (GUI + bandeja del sistema)
-├── r2_manager.py            # Cliente boto3 para Cloudflare R2
-├── local_watcher.py         # Watcher: auto-sube lo que cae en ~/Bucket/
-├── thumbnail_helper.py      # Miniaturas locales y remotas (img + vídeo)
+├── main.py                  # Main app (GUI + system tray)
+├── r2_manager.py            # boto3 client for Cloudflare R2
+├── local_watcher.py         # Watcher: auto-uploads whatever lands in ~/Bucket/
+├── thumbnail_helper.py      # Local and remote thumbnails (img + video)
 ├── requirements.txt
-├── .env.example             # Plantilla de configuración
+├── .env.example             # Configuration template
 ├── .github/workflows/
-│   └── release.yml          # 🤖 Compila el .exe y lo publica en Releases
+│   └── release.yml          # 🤖 Builds the .exe and publishes it to Releases
 └── README.md
 ```
 
 ---
 
-## 🤖 Releases automáticos (cómo se genera el .exe)
+## 🤖 Automatic releases (how the .exe is built)
 
-Cada vez que se crea un tag `v*`, GitHub Actions compila el `.exe` en Windows y lo sube al Release. **No hay que compilar a mano.**
+Every time a `v*` tag is created, GitHub Actions compiles the `.exe` on Windows and uploads it to the Release. **No manual building needed.**
 
 ```bash
-# Publicar una nueva versión (mantenedores):
+# Publish a new version (maintainers):
 git tag v1.0.1
 git push origin v1.0.1
-# → Actions compila → se crea el Release con el .exe automáticamente
+# → Actions builds → the Release with the .exe is created automatically
 ```
 
-También puedes lanzarlo manualmente desde la pestaña **Actions → Build & Release .exe → Run workflow**.
+You can also trigger it manually from the **Actions → Build & Release .exe → Run workflow** tab.
 
-El workflow hace:
+The workflow does the following:
 
-1. 🪟 Arranca un `windows-latest`
-2. 🐍 Instala Python 3.11 + dependencias + PyInstaller
-3. 📦 Ejecuta `PyInstaller --onefile --windowed --name CloudflareR2Manager main.py`
-4. 🚀 Publica `CloudflareR2Manager-vX.Y.Z.exe` (+ `.env.example`) en la página de Releases
+1. 🪟 Spins up a `windows-latest` runner
+2. 🐍 Installs Python 3.11 + dependencies + PyInstaller
+3. 📦 Runs `PyInstaller --onefile --windowed --name CloudflareR2Manager main.py`
+4. 🚀 Publishes `CloudflareR2Manager-vX.Y.Z.exe` (+ `env.example.txt`) to the Releases page
 
-### Compilar el .exe en tu PC (opcional)
+### Build the .exe on your own PC (optional)
 
 ```bash
 pip install pyinstaller
 pyinstaller --noconfirm --onefile --windowed --name CloudflareR2Manager --collect-all customtkinter main.py
-# El .exe queda en dist/ → ponlo junto a tu .env y ejecútalo
+# The .exe lands in dist/ → place it next to your .env and run it
 ```
 
 ---
 
-## 🛠️ Stack tecnológico
+## 🛠️ Tech stack
 
-| Capa | Librería |
+| Layer | Library |
 |------|----------|
 | 🖥️ GUI | `customtkinter` |
-| 📌 Bandeja | `pystray` + `Pillow` |
-| ☁️ Cloud | `boto3` (SDK S3 apuntando a R2) |
-| 👀 Watcher local | `watchdog` |
-| 🖼️ Miniaturas | `opencv-python` + `Pillow` |
+| 📌 Tray | `pystray` + `Pillow` |
+| ☁️ Cloud | `boto3` (S3 SDK pointed at R2) |
+| 👀 Local watcher | `watchdog` |
+| 🖼️ Thumbnails | `opencv-python` + `Pillow` |
 | 🔐 Config | `python-dotenv` |
-| 📦 Empaquetado | `PyInstaller` (solo en CI) |
+| 📦 Packaging | `PyInstaller` (CI only) |
 
 ---
 
-## ❓ Solución de problemas
+## ❓ Troubleshooting
 
 <details>
-<summary><b>La app no arranca / se cierra al instante</b></summary>
+<summary><b>The app won't start / closes instantly</b></summary>
 
-- Revisa que el `.env` esté **junto al `.exe`** y se llame exactamente `.env`.
-- Abre una terminal en esa carpeta y ejecuta `CloudflareR2Manager-vX.Y.Z.exe` para ver el error, o revisa que las 5 variables estén rellenas.
+- Check that the `.env` sits **next to the `.exe`** and is named exactly `.env`.
+- Open a terminal in that folder and run `CloudflareR2Manager-vX.Y.Z.exe` to see the error, or verify that all 5 variables are filled in.
 
 </details>
 
 <details>
-<summary><b>Error <code>R2_ACCOUNT_ID no se ha podido leer</code></b></summary>
+<summary><b>Error <code>R2_ACCOUNT_ID could not be read</code></b></summary>
 
-El `.env` no se encuentra o tiene nombre incorrecto (`.env.txt`). Renómbralo y reinicia la app.
-
-</details>
-
-<details>
-<summary><b>Windows dice "Windows protegió su PC" (SmartScreen)</b></summary>
-
-Es normal: el `.exe` no tiene firma de pago. Clic en *Más información → Ejecutar de todas formas*.
+The `.env` wasn't found or is misnamed (`.env.txt`). Rename it and restart the app.
 
 </details>
 
 <details>
-<summary><b>Las miniaturas de vídeo no se ven</b></summary>
+<summary><b>Windows says "Windows protected your PC" (SmartScreen)</b></summary>
 
-Instala el paquete completo con `pip install -r requirements.txt` (necesitas `opencv-python`). En el `.exe` oficial ya va incluido.
+That's expected: the `.exe` is not code-signed. Click *More info → Run anyway*.
+
+</details>
+
+<details>
+<summary><b>Video thumbnails don't show up</b></summary>
+
+Install the full bundle with `pip install -r requirements.txt` (you need `opencv-python`). The official `.exe` already includes it.
 
 </details>
 
@@ -263,8 +263,8 @@ Instala el paquete completo con `pip install -r requirements.txt` (necesitas `op
 
 <div align="center">
 
-Hecho con ⚡ para gestionar R2 sin salir del escritorio.
+Built with ⚡ to manage R2 without leaving your desktop.
 
-**[⬇️ Descargar última versión](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest)** · **[🐛 Reportar un bug](https://github.com/d3vn0x3/cloudflare_bucket_handler/issues)**
+**[⬇️ Download the latest version](https://github.com/d3vn0x3/cloudflare_bucket_handler/releases/latest)** · **[🐛 Report a bug](https://github.com/d3vn0x3/cloudflare_bucket_handler/issues)**
 
 </div>

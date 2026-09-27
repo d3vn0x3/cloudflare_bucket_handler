@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Versión del release (ej: v1.0.0). Si se deja vacío, se usa v-manual-<run_number>"
+        description: "Release version (e.g. v1.0.0). If left empty, v-manual-<run_number> is used"
         required: false
         default: ""
 
@@ -62,19 +62,19 @@ jobs:
           tag_name: ${{ steps.version.outputs.tag }}
           name: "Cloudflare R2 Sync Hub ${{ steps.version.outputs.tag }}"
           body: |
-            ## ⬇️ Descarga directa (Windows)
+            ## ⬇️ Direct download (Windows)
 
-            1. Descarga el `CloudflareR2Manager-${{ steps.version.outputs.tag }}.exe`
-            2. Ponlo en una carpeta, ej: `C:\R2Manager\`
-            3. Crea junto a él tu archivo `.env` (usa el `env.example.txt` adjunto como plantilla, renómbralo a `.env`)
-            4. Doble clic y listo — queda en la bandeja del sistema.
+            1. Download `CloudflareR2Manager-${{ steps.version.outputs.tag }}.exe`
+            2. Place it in a folder, e.g. `C:\R2Manager\`
+            3. Create your `.env` file next to it (use the attached `env.example.txt` as a template, rename it to `.env`)
+            4. Double-click and done — it stays in the system tray.
 
-            > Si SmartScreen avisa: *Más información → Ejecutar de todas formas*.
+            > If SmartScreen warns you: *More info → Run anyway*.
 
             ---
 
-            ### Cambios
-            Ver commits desde el tag anterior en la pestaña de código.
+            ### Changes
+            See commits since the previous tag in the code tab.
           files: |
             release_assets/CloudflareR2Manager-${{ steps.version.outputs.tag }}.exe
             release_assets/env.example.txt
