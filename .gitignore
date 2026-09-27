@@ -1,0 +1,17 @@
+# Credenciales locales (nunca subir)
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Build PyInstaller
+build/
+dist/
+*.spec
+
+# Sistema
+Bucket/
+*.log
+.DS_Store
+Thumbs.db
