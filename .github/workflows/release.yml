@@ -53,7 +53,7 @@ jobs:
         run: |
           mkdir -p release_assets
           cp "dist/CloudflareR2Manager.exe" "release_assets/CloudflareR2Manager-${{ steps.version.outputs.tag }}.exe"
-          cp .env.example release_assets/.env.example 2>/dev/null || echo "sin .env.example"
+          cp .env.example release_assets/env.example.txt
           ls -la release_assets/
 
       - name: Create GitHub Release with .exe
@@ -66,7 +66,7 @@ jobs:
 
             1. Descarga el `CloudflareR2Manager-${{ steps.version.outputs.tag }}.exe`
             2. Ponlo en una carpeta, ej: `C:\R2Manager\`
-            3. Crea junto a él tu archivo `.env` (usa el `.env.example` adjunto como plantilla)
+            3. Crea junto a él tu archivo `.env` (usa el `env.example.txt` adjunto como plantilla, renómbralo a `.env`)
             4. Doble clic y listo — queda en la bandeja del sistema.
 
             > Si SmartScreen avisa: *Más información → Ejecutar de todas formas*.
@@ -77,6 +77,6 @@ jobs:
             Ver commits desde el tag anterior en la pestaña de código.
           files: |
             release_assets/CloudflareR2Manager-${{ steps.version.outputs.tag }}.exe
-            release_assets/.env.example
+            release_assets/env.example.txt
           draft: false
           prerelease: false
