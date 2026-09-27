@@ -1,0 +1,7 @@
+boto3
+customtkinter
+pystray
+Pillow
+python-dotenv
+watchdog
+opencv-python
